@@ -22,6 +22,10 @@
     display: none;
 }
 
+html {
+    width: 100vw;
+}
+
 body {
     padding: 0px;
     margin: 0px;
@@ -80,10 +84,11 @@ body {
             padding: 15px;
             border-radius: 5px;
             font-family: 'Fira Code', 'Courier New', monospace;
-            overflow-x: scroll;
-            white-space: pre;
-            width: 100%;
-            margin-left: auto;
+            overflow-x: auto;
+            white-space: pre-wrap; /* ← pre を pre-wrap に変更（折り返し有効） */
+            max-width: 100%;
+            box-sizing: border-box;
+            margin: 1em auto;
         }
 
         & img {
@@ -97,4 +102,11 @@ body {
             text-decoration: none;
         }
     }
+}
+
+#footer {
+    background-color: var(--gray);
+    color: var(--black);
+    font-size: 20px;
+    padding: 10px;
 }
